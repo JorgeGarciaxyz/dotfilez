@@ -222,6 +222,10 @@ Plugin 'gabrielelana/vim-markdown'
 " Solarized Dark
 Plugin 'lifepillar/vim-solarized8'
 
+" Rspec + tmux
+Bundle 'thoughtbot/vim-rspec'
+Bundle 'jgdavey/tslime.vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -313,3 +317,12 @@ nmap <C-S-left> :tabprevious<CR>
 " Map ctrl s to save https://stackoverflow.com/questions/3446320/in-vim-how-to-map-save-to-ctrl-s
 :nmap <c-s> :w<CR>
 :imap <c-s> <Esc>:w<CR>a
+
+" Vim RSpec mapping
+let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")'
+
+" leader mean: CTRL+,
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
