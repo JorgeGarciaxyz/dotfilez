@@ -319,7 +319,7 @@ nmap <C-S-left> :tabprevious<CR>
 :imap <c-s> <Esc>:w<CR>a
 
 " Vim RSpec mapping
-let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")'
+let g:rspec_command = 'call Send_to_Tmux("bundle exec rspec {spec}\n")'
 
 " leader mean: CTRL+,
 map <Leader>t :call RunCurrentSpecFile()<CR>
