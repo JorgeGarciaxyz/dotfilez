@@ -98,7 +98,7 @@ let mapleader=","
 " Emmet
 let g:user_emmet_leader_key=','
 let g:user_emmet_install_global = 0
-autocmd FileType html,css EmmetInstall
+autocmd FileType html,js,jsx,css,eruby EmmetInstall
 
 " Toggle relative number lines
 "nnoremap <C-n> :call NumberToggle()<CR>
@@ -209,6 +209,9 @@ Plugin 'nathanaelkane/vim-indent-guides'
 
 " Ruby
 Plugin 'ngmy/vim-rubocop'
+
+" Js
+Plugin 'pangloss/vim-javascript'
 
 " Syntastic Linting
 Plugin 'scrooloose/syntastic'
